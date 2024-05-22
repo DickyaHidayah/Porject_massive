@@ -1,0 +1,95 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "dickyaa",
+    "email": "admin@gmail.com",
+    "password" : "12345",
+    "confPassword" : "12345",
+    "role":"user"
+}
+//all user
+###
+GET http://localhost:5000/users
+
+###
+//single pick user
+GET http://localhost:5000/users/83379cde-429a-44ec-b6c7-694cc1f7cc98
+
+###
+//update user
+PATCH  http://localhost:5000/users/hidayah
+Content-Type: application/json
+
+{
+    "name": "hidayah update",
+    "email": "hidayah@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role":"relawan"
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/73a96933-a544-4fb9-8384-5ce42679bd9d
+
+###
+//login user relawan/organisasi
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "hidayah@gmail.com",
+    "password" : "12345"
+}
+###
+//login user ADMIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dickya@gmail.com",
+    "password" : "12345"
+}
+
+###
+GET  http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/products
+
+###
+//post product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Organisasi penghijauan",
+    "price" : "3000"
+}
+
+//all product
+###
+GET http://localhost:5000/products
+
+//single pick user
+###
+GET http://localhost:5000/products/ce6ffc39-06bc-4781-932e-b7f4066d13f2
+
+###
+//delete product
+DELETE http://localhost:5000/products/ce6ffc39-06bc-4781-932e-b7f4066d13f2
+
+
+###
+PATCH  http://localhost:5000/products/aec2f826-4376-43bf-b721-f03b7735b2f0
+Content-Type: application/json
+
+{
+    "name": "Gotong royong",
+    "price" : "30000/jam"
+}
